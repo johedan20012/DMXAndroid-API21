@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Log.d(TAG, "sendInput: got the input: " + input);
         ///fixme Agregar el control que mande el input
         ConstraintLayout constraintLayout = (ConstraintLayout)findViewById(R.id.layoutPrincipal);
-        if(input.equals("panel") || input.equals("Panel")){ //TODO añadimos un panel
+        if(input.equals("panel") || input.equals("pad")){ //TODO añadimos un panel
             Log.d(TAG,"Panel agregado");
             int[] canales = {33,34};
             Control nuevo =new Panel(MainActivity.this,"250dp","250dp",controles.size(),canales);
@@ -140,89 +140,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         pConstraintLayout.addView(nuevo);
     }
     private void setControlesView(final ConstraintLayout constraintLayout){
-        ///TODO BORRAME INICIO
-        int[] canal = new int[1];
-        int[] canal2 = new int[2];
-        Context context = MainActivity.this;
-
-        canal[0] = 34;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 35;
-        canal2[1] = 36;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 37;
-        canal2[1] = 38;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 98;
-        canal2[1] = 98;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal = new int[1];
-        canal[0] = 82;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 83;
-        canal2[1] = 84;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 85;
-        canal2[1] = 87;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal = new int[1];
-        canal[0] = 50;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 51;
-        canal2[1] = 52;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 53;
-        canal2[1] = 54;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal = new int[1];
-        canal[0] = 66;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 67;
-        canal2[1] = 68;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 69;
-        canal2[1] = 71;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal = new int[1];
-        canal[0] = 2;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 3;
-        canal2[1] = 4;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 8;
-        canal2[1] = 9;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 6;
-        canal2[1] = 7;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal = new int[1];
-        canal[0] = 18;
-        crearLuz(context,1,"200dp","200dp",canal,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 19;
-        canal2[1] = 20;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 24;
-        canal2[1] = 25;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        canal2 = new int[2];
-        canal2[0] = 22;
-        canal2[1] = 23;
-        crearLuz(context,0,"250dp","250dp",canal2,constraintLayout);
-        ///TODO BORRAME FIN
         Button boton = new Button(this);
         boton.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
         boton.setY(constraintLayout.getHeight()-150);

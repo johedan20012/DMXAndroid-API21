@@ -10,51 +10,59 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:padding="10dp">
 
+        <ListView
+            android:id="@+id/listControles"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:layout_below="@+id/input"
+            android:layout_marginTop="19dp"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="2dp"/>/>
+
         <TextView
+            android:id="@+id/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Añadir control"
-            android:textSize="18sp"
             android:textColor="#000"
-            android:id="@+id/heading"/>
+            android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/heading"
             android:layout_marginTop="20dp"
             android:background="@null"
-            android:textColor="#000"
             android:hint="ingresa el nombre del control"
-            android:id="@+id/input"/>
+            android:textColor="#000" />
 
         <TextView
+            android:id="@+id/action_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
-            android:textSize="18sp"
+            android:text="OK"
             android:textColor="#33bbff"
-            android:id="@+id/action_ok"/>
+            android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/action_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CANCEL"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
-            android:textSize="18sp"
+            android:text="CANCEL"
             android:textColor="#33bbff"
-            android:id="@+id/action_cancel"/>
+            android:textSize="18sp" />
 
     </RelativeLayout>
-
 
 
 </RelativeLayout>

@@ -12,14 +12,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import kevin20012com.dmx.R;
+import kevin20012com.dmx.modales.ModalAddControlList.AdaptadorItem;
+import kevin20012com.dmx.modales.ModalAddControlList.Item;
 
 public class ModalAddControl extends DialogFragment {
+
+    private ListView listControles;
+    private AdaptadorItem adaptadorListControles;
 
     private static final String TAG = "MyCustomDialog";
 
@@ -70,7 +78,44 @@ public class ModalAddControl extends DialogFragment {
             }
         });
 
+        listControles = (ListView) view.findViewById(R.id.listControles);
+        adaptadorListControles = new AdaptadorItem(getActivity(), GetControlesItems());
+        listControles.setAdapter(adaptadorListControles);
+
+        listControles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Object listItem = list.getItemAtPosition(position);
+                String input = "";
+
+                switch (position) {
+                    case 0:
+                        input = "switch";
+                        break;
+                    case 1:
+                        input = "pad";
+                        break;
+                    case 2:
+                        input = "joy";
+                        break;
+                }
+
+                if (input != "") { //TODO esto significa que le dio click a un elemento d mi listview y agregara ese control
+                    mOnInputListener.sendInput(input);
+                    getDialog().dismiss();
+                }
+            }
+        });
         return view;
+    }
+
+    private ArrayList<Item> GetControlesItems(){
+        ArrayList<Item> listItems = new ArrayList<>();
+        listItems.add(new Item(R.drawable.switch_icon, "Switch" ,"Alterna entre el valor 0(off) y 255(on) de un canal"));
+        listItems.add(new Item(R.drawable.pad_icon, "Pad" ,"El eje X es el valor del primer canal y el eje Y del segundo"));
+        listItems.add(new Item(R.drawable.joystick_icon, "Joystick" ,"El eje X es el valor del primer canal y el eje Y del segundo, se regresa al centro cuando no lo tocas"));
+
+        return listItems;
     }
 
     @Override

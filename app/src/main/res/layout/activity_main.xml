@@ -19,7 +19,7 @@
                 android:layout_marginTop="72dp"
                 android:text="@string/conectar"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />-
+                app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
