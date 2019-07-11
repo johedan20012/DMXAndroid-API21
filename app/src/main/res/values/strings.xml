@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DMX</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_click">Title click</string>
+    <string name="menu_controles">Controles</string>
+    <string name="menu_luces">Luces</string>
+    <string name="menu_escenas">Escenas</string>
+    <string name="menu_peliculas">Peliculas</string>
+    <string name="conectar">Buscar DMX</string>
+    <string name="dmx">Menu del controlador DMX</string>
+    <string name="canal">Canal primario</string>
+    <string name="canal2">Canal secundario</string>
+    <string name="ancho">Anchura</string>
+    <string name="largo">Altura</string>
+</resources>
